@@ -1,23 +1,19 @@
 # CoreNetworkScan
 Software desenvolvido para escanear pacotes em trânsito localmente dos protocolos HTTP, IPV4, IPV6, TCP e UDP. O scan terá integração com o MongoDB e API criada com o Flask.
 
-# Título
-
-<h1 align="center"> CoreNetworkScan </h1>
+![network_](https://github.com/RakelMacedo/CoreNetworkScan/assets/78339857/6f0ef9ba-4434-42ab-9ab7-c7f9c601ba4e)
 
 # Badges
 ![badge1](https://img.shields.io/badge/python-3.11-blue) ![badge2](https://img.shields.io/badge/status-aguardando%20revis%C3%A3o-yellow) ![badge3](https://img.shields.io/badge/testado%20por-GrupoDosCrias-green)
 
-# Índice 
 
-* [Título](#título)
+# Índice 
 * [Badges](#badges)
 * [Índice](#índice)
 * [Descrição do Projeto](#descrição-do-projeto)
 * [Vídeo Explicativo](#vídeo-explicativo)
 * [Status do Projeto](#status-do-projeto) 
 * [Funcionalidades e Demonstração da Aplicação](#funcionalidades-e-demonstração-da-aplicação)
-* [Tecnologias utilizadas](#tecnologias-utilizadas)
 * [Link de vídeo explicativo](TBD)
 * [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras-do-projeto)
 * [Licença](#licença)
@@ -25,7 +21,7 @@ Software desenvolvido para escanear pacotes em trânsito localmente dos protocol
 
 # Descrição do Projeto
 
-O presente projeto tem como objetivo realizar a interceptação de dados na rede (em todas as camadas do OSI) e armazenar os PDUs (Packet Data Unit) como objetos JSON no MongoDB, sendo todas as ações feitas através de um API utilizando os métodos HTTP implementados no Python/Flask. Para a composição da aplicação foram escolhidos dois protocolos para interceptar os dados.
+O presente projeto tem como objetivo realizar a interceptação de dados na rede e armazenar os PDUs (Packet Data Unit) como objetos JSON no MongoDB, sendo todas as ações feitas através de um API utilizando os métodos HTTP implementados no Python/Flask. Para a composição da aplicação foram escolhidos dois protocolos para interceptar os dados.
 
 # Vídeo Explicativo
 
@@ -39,7 +35,7 @@ O projeto foi desenvolvido mediante a proposta de trabalho do professor Fábio C
 
 ## Funcionamento dos algoritmos
 
-Este código Python consiste em duas funções, Ethernet e TCP, que permitem a captura e análise de pacotes de rede Ethernet e pacotes TCP. A função Ethernet analisa pacotes Ethernet em um loop infinito, extraindo informações como endereços MAC de origem e destino, bem como o tipo Ethernet. A função TCP concentra-se em pacotes IPv4 e, quando encontra um pacote TCP, extrai informações detalhadas, como portas de origem e destino, números de sequência e flags TCP.
+Este código Python consiste em duas funções, Ethernet e TCP, que permitem a captura e análise de pacotes de rede Ethernet e pacotes TCP. A função Ethernet analisa pacotes Ethernet, extraindo informações como endereços MAC de origem e destino, bem como o tipo Ethernet. Quando encontra um pacote TCP, extrai informações detalhadas, como portas de origem e destino, números de sequência e flags TCP.
 
 Ambas as funções utilizam sockets brutos para captura de pacotes em um nível mais baixo. O programa pode ser interrompido pelo usuário com uma exceção KeyboardInterrupt, e, ao final, fecha o socket bruto. As duas funções são chamadas sequencialmente no código, permitindo a captura contínua de pacotes Ethernet e pacotes TCP.
 
@@ -47,19 +43,22 @@ Ambas as funções utilizam sockets brutos para captura de pacotes em um nível 
 
 * Primeiro, abra um terminal no seu sistema Linux.
 
-* Clone o repositório no diretório desejadodiretamente pelo terminal Linux/MacOS, com o comando:
+* Clone o repositório no diretório desejado diretamente pelo terminal Linux/MacOS, com o comando:
 ```
 git clone https://github.com/RakelMacedo/CoreNetworkScan.git
 ```
 * Em seguida, utilizando o terminal, vá para o diretório onde foi baixado o repositório:
 ```
-cd /caminho/para/o/diretorio/
+cd CoreNetworkScan
 ```
-* Execute o seguinte comando para iniciar a captura de pacotes:
+* Execute o seguinte comando para iniciar a API:
 ```
-sudo python3 scanners.py
+sudo python3 api.py
 ```
-* Deixe o código em execução para capturar e processar pacotes.
+* Deixe o código em execução para a API ficar ativa e capturar e processar pacotes.
+
+* Abra o http://127.0.0.1 para ver a página inicial
+![bemvindo](https://github.com/RakelMacedo/CoreNetworkScan/assets/78339857/efca51f0-7082-4fc6-a8bb-104c72d88778)
 
 * Antes de iniciar a aplicação, verifique se você já tem o MongoDB instalado no seu sistema. Caso não o tenha, siga as instruções de instalação do MongoDB apropriadas para o seu sistema operacional. Se você já possui o MongoDB instalado, inicie o serviço do MongoDB com os seguintes passos:
 
@@ -67,18 +66,9 @@ sudo python3 scanners.py
 
 * Execute o seguinte comando para iniciar o serviço do MongoDB:
 ```
-sudo systemctl start mongodb
+systemctl start mongod
 ```
-Agora, o código está em execução e o MongoDB está pronto para ser utilizado. Você pode começar a interagir com o código e armazenar dados no MongoDB.
-
-# Tecnologias utilizadas
-
-Para implementação da captura e análise de pacotes de rede, utilizamos as seguintes tecnologias:
-Python 3.11: A linguagem de programação principal para o desenvolvimento da aplicação.
-Socket: A biblioteca Python usada para a captura de pacotes de rede.
-Struct: A biblioteca Python usada para desempacotar os dados de pacotes de rede.
-A aplicação inclui recursos como funções de laço "while", "try" e "except" para captura e tratamento de exceções, bem como estruturas condicionais "if" para tomada de decisões durante a análise de pacotes de rede.
-Esta aplicação não requer a implementação de Shell Script ou PowerShell, uma vez que é executada diretamente em Python para a interceptação e análise de pacotes de rede.
+Agora, a API está em execução peonta para rodar e vizualizar dados dos protocolos TCP e Ethernet e o MongoDB está pronto para ser utilizado. 
 
 # Link de vídeo explicativo
 
