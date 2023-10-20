@@ -1,11 +1,10 @@
 # CoreNetworkScan
-Software desenvolvido para escanear pacotes em trânsito localmente dos protocolos HTTP, IPV4, IPV6, TCP e UDP. O scan terá integração com o MongoDB e API criada com o Flask.
+Software desenvolvido para escanear pacotes em transito localmente dos protocolos TCP e Ethernet. O scan terá integração com o MongoDB e API criada com o Flask.
 
 ![network_](https://github.com/RakelMacedo/CoreNetworkScan/assets/78339857/6f0ef9ba-4434-42ab-9ab7-c7f9c601ba4e)
 
 # Badges
 ![badge1](https://img.shields.io/badge/python-3.11-blue) ![badge2](https://img.shields.io/badge/status-aguardando%20revis%C3%A3o-yellow) ![badge3](https://img.shields.io/badge/testado%20por-GrupoDosCrias-green)
-
 
 # Índice 
 * [Badges](#badges)
@@ -50,6 +49,10 @@ git clone https://github.com/RakelMacedo/CoreNetworkScan.git
 * Em seguida, utilizando o terminal, vá para o diretório onde foi baixado o repositório:
 ```
 cd CoreNetworkScan
+```
+* Instale as dependencias:
+```
+pip install -r requirements.txt
 ```
 * Execute o seguinte comando para iniciar a API:
 ```
