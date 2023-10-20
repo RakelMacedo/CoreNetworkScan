@@ -57,7 +57,7 @@ sudo python3 api.py
 ```
 * Deixe o código em execução para a API ficar ativa e capturar e processar pacotes.
 
-* Abra o http://127.0.0.1 para ver a página inicial
+* Abra o http://127.0.0.1 ou http://localhost para ver a página inicial.
 ![bemvindo](https://github.com/RakelMacedo/CoreNetworkScan/assets/78339857/efca51f0-7082-4fc6-a8bb-104c72d88778)
 
 * Antes de iniciar a aplicação, verifique se você já tem o MongoDB instalado no seu sistema. Caso não o tenha, siga as instruções de instalação do MongoDB apropriadas para o seu sistema operacional. Se você já possui o MongoDB instalado, inicie o serviço do MongoDB com os seguintes passos:
