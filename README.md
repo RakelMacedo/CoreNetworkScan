@@ -57,7 +57,7 @@ cd /caminho/para/o/diretorio/
 ```
 * Execute o seguinte comando para iniciar a captura de pacotes:
 ```
-sudo python3 nome_do_arquivo.py
+sudo python3 scanners.py
 ```
 * Deixe o código em execução para capturar e processar pacotes.
 
