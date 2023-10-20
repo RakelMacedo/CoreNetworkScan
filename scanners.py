@@ -2,7 +2,7 @@ import socket
 import struct
 
 
-def DNS():
+def PING():
     pass
 
 def UDP():
